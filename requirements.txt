@@ -1,0 +1,12 @@
+geopandas
+pandas
+ipykernel
+requests
+osmnx
+SQLAlchemy
+psycopg2
+GeoAlchemy2
+shapely
+numpy
+jsonify
+flask-sqlalchemy 
