@@ -46,3 +46,6 @@ GeoAlchemy2: a library for working with geospatial data in SQL databases using S
 numpy: a library for numerical computing in Python.
 jsonify: a method for serializing JSON data in Flask.
 flask-sqlalchemy: a Flask extension for working with SQL databases using SQLAlchemy.
+
+# Map density population
+This code block creates a choropleth map of population density by prefecture in Guinea using the density_2014 column previously created. It also adds prefecture name labels and sets the title and axis labels. The resulting map will show the relative population densities of each prefecture in Guinea.
