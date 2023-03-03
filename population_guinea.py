@@ -30,14 +30,46 @@ gin_prefectures['area'] = gin_prefectures.area/1000000
 gin_prefectures = gin_prefectures.merge(population_data, on = 'Prefecture') 
 # # Create a population density column
 gin_prefectures['density_2014'] = gin_prefectures['Population_2014']/gin_prefectures['area'] 
-# # # # # Plotting density
-gin_prefectures.plot(column = 'density_2014', cmap = 'gist_rainbow', legend = True) 
 
 # Create a new figure and axis
 fig, ax = plt.subplots(figsize=(10,10))
 
 # Plot the density choropleth
-gin_prefectures.plot(column='Population_2014', legend= True, cmap='tab20_r', ax=ax)
+gin_prefectures.plot(column='density_2014', legend= True, cmap='nipy_spectral_r', ax=ax)
+
+# Add prefecture name labels
+gin_prefectures.apply(lambda x: ax.annotate(s=x.Prefecture, xy=x.geometry.centroid.coords[0], ha='center'),axis=1)
+
+# Set the title and axis labels
+ax.set_title('Population by Prefecture in Guinea (2014)')  
+ax.set_xlabel('Longitude') 
+ax.set_ylabel('Latitude')
+
+# Show the plot
+plt.show()
+
+# Create a new figure and axis
+fig, ax = plt.subplots(figsize=(10,10))
+
+# Plot the density choropleth
+gin_prefectures.plot(column='Population_2014', legend= True, cmap='nipy_spectral_r', ax=ax)
+
+# Add prefecture name labels
+gin_prefectures.apply(lambda x: ax.annotate(s=x.Prefecture, xy=x.geometry.centroid.coords[0], ha='center'),axis=1)
+
+# Set the title and axis labels
+ax.set_title('Population by Prefecture in Guinea (2014)')  
+ax.set_xlabel('Longitude') 
+ax.set_ylabel('Latitude')
+
+# Show the plot
+plt.show()
+
+# Create a new figure and axis
+fig, ax = plt.subplots(figsize=(10,10))
+
+# Plot the density choropleth
+gin_prefectures.plot(column='area', legend= True, cmap='nipy_spectral', ax=ax)
 
 # Add prefecture name labels
 gin_prefectures.apply(lambda x: ax.annotate(s=x.Prefecture, xy=x.geometry.centroid.coords[0], ha='center'),axis=1)
