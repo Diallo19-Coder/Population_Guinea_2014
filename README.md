@@ -32,3 +32,17 @@ Status: a text column representing the status of a prefecture.
 Population_2014: a bigint column representing the population of a prefecture in 2014.
 density_2014: a double precision column representing the population density of a prefecture in 2014.
 The script also creates an index called idx_gin_adm2_geometry on the geometry column using a GiST (Generalized Search Tree) index. The purpose of this index is to speed up queries that involve spatial data, such as finding all the prefectures that intersect a given polygon.
+ 
+# Requirements
+These are Python packages/libraries:
+
+geopandas: a library to work with geospatial data, particularly geospatial data in GeoJSON format.
+pandas: a library for data manipulation and analysis.
+ipykernel: a kernel for Jupyter notebooks, used to execute Python code in Jupyter notebooks.
+requests: a library for sending HTTP requests and handling HTTP responses.
+SQLAlchemy: a library for working with databases using Python, particularly for creating SQL queries and connecting to a database server.
+psycopg2: a library for working with PostgreSQL databases using Python.
+GeoAlchemy2: a library for working with geospatial data in SQL databases using SQLAlchemy.
+numpy: a library for numerical computing in Python.
+jsonify: a method for serializing JSON data in Flask.
+flask-sqlalchemy: a Flask extension for working with SQL databases using SQLAlchemy.
