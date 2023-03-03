@@ -2,11 +2,9 @@ geopandas
 pandas
 ipykernel
 requests
-osmnx
 SQLAlchemy
 psycopg2
-GeoAlchemy2
-shapely
+GeoAlchemy
 numpy
 jsonify
 flask-sqlalchemy 
