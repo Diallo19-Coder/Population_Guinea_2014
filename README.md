@@ -13,6 +13,14 @@ The first endpoint, /populations/<Prefecture>, is a GET endpoint that retrieves 
 The second endpoint, /populations, is also a GET endpoint that retrieves all the population data from the table. It queries the database for all rows in the table, removes the SQLAlchemy-specific '_sa_instance_state' attribute from each object, and returns the results as a JSON object.
 
 The application runs in debug mode and listens on all available network interfaces. It uses the database connection details provided in the DB_CONFIG dictionary to connect to the PostgreSQL server.
+This code defines a Flask application and connects it to a PostgreSQL database using SQLAlchemy. It then defines a data model object called "Population" that maps to a PostgreSQL table called "gin_adm2". The code provides two REST/CRUD endpoints - one to retrieve a single population record by Prefecture name, and another to retrieve all population records. The code also sets up the app configuration and starts the Flask application in debug mode.
+This code is a Python program that uses the Flask web framework to create a web application that accesses and displays data about the population of Guinea. It defines a SQLAlchemy database model for the population data and has routes to initialize the database and retrieve population data by prefecture. The code also defines routes to retrieve data about all countries in a SQLite database and to render a template for a web page.
+
+
+
+
+
+
 
 # DB_pop_guinea
 
