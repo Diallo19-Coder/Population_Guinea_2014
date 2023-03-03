@@ -22,7 +22,7 @@ This code is a Python program that uses the Flask web framework to create a web 
 
 
 
-# DB_pop_guinea
+# DB1_pop_guinea
 
 This is a SQL script that creates a table called gin_adm2 in the public schema with the following columns:
 Prefecture: a text column representing the name of a prefecture.
